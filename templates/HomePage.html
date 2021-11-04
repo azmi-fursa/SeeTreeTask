@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Images</title>
+    <h1 align="center">Images Statistics</h1>
+    <h5 align="center">Click on image to view statistics</h5>
+</head>
+<body style="background-color:powderblue;">
+    <hr color="black">
+    <center>
+    {% for i in range(1, 10) %}
+      <a href="http://localhost:8080/Functions/IMG_{{i}}.jpg">
+      <img src="https://storage.googleapis.com/seetree-demo-open/IMG_{{i}}.jpg" alt="IMG_{{i}}.jpg" width="200" height="200" style="border:5px solid black">
+      </a>
+    {% endfor %}
+    </center>
+<hr color="black">
+</body>
+</html>

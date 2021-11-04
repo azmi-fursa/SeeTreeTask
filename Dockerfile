@@ -1,11 +1,9 @@
 FROM python:3.8.5
 
-#mkdir templates + cd templates
-WORKDIR /templates
+#mkdir app + cd app
+WORKDIR /app
 
 COPY templates .
-
-WORKDIR /app
 
 COPY requirements.txt .
 

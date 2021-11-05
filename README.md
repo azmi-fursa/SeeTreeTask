@@ -25,7 +25,7 @@ The solution is to create a database for each image that includes all the functi
 
 # Getting Started:
 To work with the application, you must first make sure to install all these prerequisites (if you haven't already):
-1)Flask, in order to install: apt install python3-flask
+1)Flask, in order to install: apt install python3-flask \n
 2)Docker Desktop - to install, follow the instructions here : https://docs.docker.com/desktop/windows/install/
 3)Python, to install, follow instructions: https://www.python.org/downloads/
 4) and lastly, you need to have GIT installed on your terminal. I strongly suggest working with "Git Bash", to download: https://git-scm.com/downloads

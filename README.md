@@ -1,1 +1,19 @@
-# SeeTreeTask
+# Image Pixel Statistics:
+
+## Motivation and Goals:
+AI is an expanding field in the industry, in this application we will learn how to extract interesting features about images and how to calculate Image Statistics.
+the goal of this application is to implement functions that help us extract statistics about various images, these functions include: min, max, mean, median and percentile.
+
+The images are stored in a Cloud Storage Bucket, and in order to access these images we will have to send a GET request to the following api:  https://storage.googleapis.com/seetree-demo-open/.
+
+There are 10 images in the api labeled "IMG_i.jpg" - where i is in the range 1:10. To access the 4th image for instance, we will need to go to : https://storage.googleapis.com/seetree-demo-open/IMG_4.jpg
+
+## Calculation Method:
+
+*In order to calculate the desired image statistics, we must first turn our RGB image into a grayscale image, we can easily do that using python's libraries (PIL)
+*After turning the image into a grayscale image, now we can view the level of gray in each pixel as a histogram in the range (0:255).
+*To calculate each of the required functions, we can use python's "numpy" library which supports all the desired functionality.
+
+## HTML pages:
+We use the render_template to align the work of python with the HTML pages easily. we first create a simple HTML template for each page and implement the python output through render_template.
+

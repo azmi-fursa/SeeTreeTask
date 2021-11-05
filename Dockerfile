@@ -6,6 +6,6 @@ RUN pip install -r requirements.txt
 #copying the python code
 COPY code.py .
 
-EXPOSE 5000
+EXPOSE 8080
 #run python code in the docker image
 CMD python code.py

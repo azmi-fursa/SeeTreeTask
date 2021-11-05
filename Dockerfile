@@ -12,4 +12,4 @@ COPY configuration.py .
 
 EXPOSE 8080
 #run python code in the docker image
-CMD python code.py
+CMD python routes.py

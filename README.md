@@ -37,5 +37,6 @@ Now that you have everything you need to work with the app, follow these simple 
 4)docker run -itdp 8080:8080 imagestatistics
 
 Voila! you are ready to go, access the application through: http://localhost:8080/ , you will be directed to this webpage:
-http://floomby.io/s/051121/wqo1pMd7
+
+![image](https://user-images.githubusercontent.com/91056755/140448754-48cd6377-434c-4dcb-802a-b14e7192716a.png)
 

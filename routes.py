@@ -31,13 +31,18 @@ def functions(IMAGE_FILE_NAME):
     var = try_open_image(image)
     if(var=="error"):
         return render_template('ErrorPaths.html', msg='Bad image file name!')
-    return render_template('PixelFunctionalities.html', IMAGE_FILE_NAME=IMAGE_FILE_NAME)
+    return render_template('PixelFunctionality.html', IMAGE_FILE_NAME=IMAGE_FILE_NAME)
 
 @app.route('/stats/<IMAGE_FILE_NAME>/<function_NAME>', methods=['GET'])
 def calc_stats(IMAGE_FILE_NAME,function_NAME):
     check_database = redundant_calculations(IMAGE_FILE_NAME,function_NAME)
     if(check_database!="better luck next time"):
-        return check_database
+        if(function_NAME[0]=='p'):
+            percent = function_NAME[1:]
+            statement = 'The ' + str(percent) + '% value of the image (' + IMAGE_FILE_NAME + ') is : ' + check_database
+        else:
+            statement = 'the ' + function_NAME + ' value of (' + IMAGE_FILE_NAME + ') is: ' + check_database
+        return render_template('Calculations.html', value = str(statement), IMAGE_FILE_NAME=IMAGE_FILE_NAME)
     image = URL + IMAGE_FILE_NAME
     grayscale = try_open_image(image)
     numpy_grayscale = np.array(grayscale)

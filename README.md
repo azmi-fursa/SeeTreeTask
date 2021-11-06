@@ -60,5 +60,5 @@ iv)```docker run -itdp 8080:8080 pixelstatistics``` \
 
 Voila! you are ready to go, access the application through: http://localhost:8080/ , you will be directed to this webpage: \
 
-![image](https://user-images.githubusercontent.com/91056755/140448754-48cd6377-434c-4dcb-802a-b14e7192716a.png)
+![image](https://user-images.githubusercontent.com/91056755/140619905-68ca3dc0-ff1e-4cd1-ac03-072a6e18f5dd.png)
 

@@ -50,9 +50,9 @@ To work with the application, you must first make sure to install all these prer
 i) Flask, in order to install: ```apt install python3-flask``` \
 ii) Docker Desktop - to install, follow the instructions here : https://docs.docker.com/desktop/windows/install/ \
 iii) Python, to install, follow instructions: https://www.python.org/downloads/ \
-iv) Finally, you need to have GIT installed on your terminal. I strongly suggest working with "Git Bash", to download: https://git-scm.com/downloads \
+iv) Finally, you need to have GIT installed on your terminal. I strongly suggest working with "Git Bash", to download: https://git-scm.com/downloads 
 
-Now that you have everything you need to work with the app, follow these simple steps to access the application: \
+Now that you have everything you need to work with the app, follow one of the three possible methods to access the application: \
 
 ## To use the application locally with flask:
 i) ```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\
@@ -64,7 +64,12 @@ iv) ```python routes.py```
 i) ```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\
 ii) ```cd SeeTreeTask``` \
 iii) ```docker build -t pixelstatistics .``` \
-iv) ```docker run -itdp 8080:8080 pixelstatistics``` \
+iv) ```docker run -itdp 8080:8080 pixelstatistics``` 
+
+## To use the application locally with Docker-Compose:
+i) ```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\
+ii) ```cd SeeTreeTask``` \
+iii) ```docker-compose up```
 
 Voila! you are ready to go, access the application through: http://localhost:8080/ , you will be directed to this webpage: \
 

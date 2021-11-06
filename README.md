@@ -24,6 +24,12 @@ i)if the image is not presented in the given API, if we try to reach http://loca
 ii)if the image is present, yet the function isn't supported by the application (avg function for instance), when trying to access http://localhost:8080/stats/IMG_3.jpg/avg the user is presented with the following error page:
 ![image](https://user-images.githubusercontent.com/91056755/140619985-3b7dae5d-cee3-4653-b1df-7102da43e139.png)
 
+## Health Page:
+to access the health page where you can find tips on how to maintain a healthy life style, go to http://localhost:8080/health , you will be redirected to:
+
+![image](https://user-images.githubusercontent.com/91056755/140623411-9a59c8bb-2887-493c-963a-86bf51ae974d.png)
+
+
 ## Calculation Method:
 
 *In order to calculate the desired image statistics, we must first turn our RGB image into a grayscale image, we can easily do that using python's libraries (PIL) and the function ```convert(L)```\

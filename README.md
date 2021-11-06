@@ -8,7 +8,7 @@ min, max, mean, median and percentile.
 
 The images are stored in a Cloud Storage Bucket, and in order to access these images we will have to send a GET request to the following api:  https://storage.googleapis.com/seetree-demo-open/.
 
-There are 10 images in the api labeled "IMG_i.jpg" - where i is in the range 1:10. To access the 4th image for instance, we will need to go to : https://storage.googleapis.com/seetree-demo-open/IMG_4.jpg
+There are 10 images in the api labeled "IMG_i.jpg" - where i is in the range [1:10]. To access the 4th image for instance, we will need to go to : https://storage.googleapis.com/seetree-demo-open/IMG_4.jpg
 
 ## Calculation Method:
 
@@ -33,10 +33,10 @@ To work with the application, you must first make sure to install all these prer
 4) and lastly, you need to have GIT installed on your terminal. I strongly suggest working with "Git Bash", to download: https://git-scm.com/downloads
 
 Now that you have everything you need to work with the app, follow these simple steps to access the application:
-1)git clone https://github.com/azmi-fursa/SeeTreeTask.git
-2)cd SeeTreeTask
-3)docker build -t imagestatistics .
-4)docker run -itdp 8080:8080 imagestatistics
+1)```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\
+2)```cd SeeTreeTask```
+3)```docker build -t imagestatistics .```
+4)```docker run -itdp 8080:8080 imagestatistics```
 
 Voila! you are ready to go, access the application through: http://localhost:8080/ , you will be directed to this webpage:
 

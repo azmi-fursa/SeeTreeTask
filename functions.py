@@ -14,7 +14,7 @@ def try_open_image(imageFileURL):
         return "error"
     return img
 
-    
+#calculating different functionalities for image pixels.
 def calc_pixel_features(name, function, numpy_grayscale):    
     if name in database:
         if function in database[name]:
@@ -23,40 +23,37 @@ def calc_pixel_features(name, function, numpy_grayscale):
     percent = function[1:]
     if function == 'min':
         value = str(np.min(numpy_grayscale))
-        statement = 'Minimum value of (' + name + ') is: ' + value
-        return statement,value
+        return value
     
     elif function == 'max':
         value = str(np.max(numpy_grayscale))
-        statement = 'Maximum value of (' + name + ') is: ' + value
-        return statement,value
+        return value
     
     elif function == 'mean':
         value = str(np.mean(numpy_grayscale))
-        statement = 'Mean value of (' + name + ') is: ' + value
-        return statement,value
+        return value
     
     elif function == 'median':
         value = str(np.median(numpy_grayscale))
-        statement = 'Minimum value of (' + name + ') is: ' + value
-        return statement,value
+        return value
     
     elif function[0] == 'p' and percent.isnumeric() and int(percent) in range(0,101):
         value = str(np.percentile(numpy_grayscale, int(percent)))
-        statement = 'The ' + str(percent) + '% percentile value of the image (' + name + ') is : ' + value
-        return statement,value
+        return value
     else:
-        return "none","none"
+        return "none"
 
-
+#to reduce redundant calculations:
 def redundant_calculations(name,function):
     if name in database:
         if function in database[name]:
             return database[name][function]
+    #we return the value if it is present in the database, else we need to update it
     return "better luck next time"
 
 
 def update_database(name,function,value):
+    #update database with the calculated functionality.
     if name not in database:
         database.update({name: {function: str(value)}})
     elif function not in database[name]:

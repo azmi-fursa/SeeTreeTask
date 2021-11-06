@@ -18,9 +18,10 @@ There are 10 images in the api labeled "IMG_i.jpg" - where i is in the range [1:
 ## Error URLs:
 When trying to access invalid URLs we must present relevant error pages:\
 i)if the image is not presented in the given API, the user is presented with the following error page:
-
+![image](https://user-images.githubusercontent.com/91056755/140619970-a8e8c473-e0cc-4811-b216-74d675facc8b.png)
 
 ii)if the image is present, yet the function isn't supported by the application, the user is presented with the following error page:
+![image](https://user-images.githubusercontent.com/91056755/140619985-3b7dae5d-cee3-4653-b1df-7102da43e139.png)
 
 
 
@@ -36,7 +37,9 @@ We use the render_template to align the work of python with the HTML pages easil
 
 ## Bonus Section:
 Many requests are redundant, therefore we must think of a way to spare ourselves from calculating problems which we already faced and calculated. (redundant problems are problems that include the same image and the same function as a previously calculated request)\
-The solution is to create a database for each image that includes all the functions: When an image is presented with a function that it hadn't calculated before, we calculate the desired function and add it to the image's database, whereas when we are faced with a previously calculated function we automatically return the previous calculation. 
+The solution is to create a database for each image that includes all the functions: When an image is presented with a function that it hadn't calculated before, we calculate the desired function and add it to the image's database, whereas when we are faced with a previously calculated function we automatically return the previous calculation./
+lets view it by code:/
+i created a database for each image with the following command: ```database = {"IMAGE_FILE_NAME": { }}``` , if both the image and the function aren't present, we update the database with this command: ```database.update({name: {function: str(value)}})``` , if the image is present yet the function isn't: ```database[name].update({function: str(value)})``` .
 
 # Getting Started:
 To work with the application, you must first make sure to install all these prerequisites (if you haven't already):\
@@ -50,6 +53,7 @@ Now that you have everything you need to work with the app, follow these simple 
 ## To use the application locally with flask:
 i)```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\
 ii) ```cd SeeTreeTask``` \
+iii) ```pip install requirements.txt```
 iii) ```python routes.py```
 
 ## To use the application locally with Docker:

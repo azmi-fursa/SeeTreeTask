@@ -53,8 +53,8 @@ Now that you have everything you need to work with the app, follow these simple 
 ## To use the application locally with flask:
 i)```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\
 ii) ```cd SeeTreeTask``` \
-iii) ```pip install requirements.txt```
-iii) ```python routes.py```
+iii) ```pip install requirements.txt``` \
+iv) ```python routes.py```
 
 ## To use the application locally with Docker:
 i)```git clone https://github.com/azmi-fursa/SeeTreeTask.git```\

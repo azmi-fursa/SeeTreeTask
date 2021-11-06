@@ -41,10 +41,16 @@ def calc_stats(IMAGE_FILE_NAME,function_NAME):
     image = URL + IMAGE_FILE_NAME
     grayscale = try_open_image(image)
     numpy_grayscale = np.array(grayscale)
-    statement,value = calc_pixel_features(IMAGE_FILE_NAME, function_NAME, numpy_grayscale)   
+    value = calc_pixel_features(IMAGE_FILE_NAME, function_NAME, numpy_grayscale)   
     update_database(IMAGE_FILE_NAME,function_NAME,value)    
     if (value == "none"):
         return render_template('Error.html', msg='Requested function is not suppported!')
+    if(function_NAME[0]=='p'):
+        percent = function_NAME[1:]
+        statement = 'The ' + str(percent) + '% value of the image (' + IMAGE_FILE_NAME + ') is : ' + value
+    else:
+        statement = 'the ' + function_NAME + ' value of (' + IMAGE_FILE_NAME + ') is: ' + value
+    print(statement)
     return render_template('Statistics.html', value = str(statement), IMAGE_FILE_NAME=IMAGE_FILE_NAME)
 
     

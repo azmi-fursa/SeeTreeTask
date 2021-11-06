@@ -2,8 +2,8 @@ from flask import render_template
 import numpy as np
 from configuration import URL
 from configuration import app
-from variables import host
-from variables import port
+from configuration import host
+from configuration import port
 from functions import calc_pixel_features
 from functions import update_database
 from functions import try_open_image

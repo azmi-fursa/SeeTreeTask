@@ -12,7 +12,7 @@ from functions import redundant_calculations
 #handling invalid URLs.
 @app.errorhandler(404)
 def error(e):
-    return render_template("Error.html")
+    return render_template("ErrorPaths.html")
 
 #redirecting to the home page
 @app.route('/')
@@ -30,8 +30,8 @@ def functions(IMAGE_FILE_NAME):
     image = URL + IMAGE_FILE_NAME
     var = try_open_image(image)
     if(var=="error"):
-        return render_template('Error.html', msg='Bad image file name!')
-    return render_template('Functions.html', IMAGE_FILE_NAME=IMAGE_FILE_NAME)
+        return render_template('ErrorPaths.html', msg='Bad image file name!')
+    return render_template('PixelFunctionality.html', IMAGE_FILE_NAME=IMAGE_FILE_NAME)
 
 @app.route('/stats/<IMAGE_FILE_NAME>/<function_NAME>', methods=['GET'])
 def calc_stats(IMAGE_FILE_NAME,function_NAME):
@@ -44,14 +44,14 @@ def calc_stats(IMAGE_FILE_NAME,function_NAME):
     value = calc_pixel_features(IMAGE_FILE_NAME, function_NAME, numpy_grayscale)   
     update_database(IMAGE_FILE_NAME,function_NAME,value)    
     if (value == "none"):
-        return render_template('Error.html', msg='Requested function is not suppported!')
+        return render_template('ErrorPaths.html', msg='Requested function is not suppported!')
     if(function_NAME[0]=='p'):
         percent = function_NAME[1:]
         statement = 'The ' + str(percent) + '% value of the image (' + IMAGE_FILE_NAME + ') is : ' + value
     else:
         statement = 'the ' + function_NAME + ' value of (' + IMAGE_FILE_NAME + ') is: ' + value
     print(statement)
-    return render_template('Statistics.html', value = str(statement), IMAGE_FILE_NAME=IMAGE_FILE_NAME)
+    return render_template('Calculations.html', value = str(statement), IMAGE_FILE_NAME=IMAGE_FILE_NAME)
 
     
 if __name__ == '__main__':    

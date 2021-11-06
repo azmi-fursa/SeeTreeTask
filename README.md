@@ -17,10 +17,10 @@ There are 10 images in the api labeled "IMG_i.jpg" - where i is in the range [1:
 
 ## Error URLs:
 When trying to access invalid URLs we must present relevant error pages:\
-i)if the image is not presented in the given API, the user is presented with the following error page:
+i)if the image is not presented in the given API, if we try to reach http://localhost:8080/Functions/IMG_22.jpg for instance (IMG_22.jpg isn't available), the user is presented with the following error page:
 ![image](https://user-images.githubusercontent.com/91056755/140619970-a8e8c473-e0cc-4811-b216-74d675facc8b.png)
 
-ii)if the image is present, yet the function isn't supported by the application, the user is presented with the following error page:
+ii)if the image is present, yet the function isn't supported by the application (avg function for instance), when trying to access http://localhost:8080/stats/IMG_3.jpg/avg the user is presented with the following error page:
 ![image](https://user-images.githubusercontent.com/91056755/140619985-3b7dae5d-cee3-4653-b1df-7102da43e139.png)
 
 

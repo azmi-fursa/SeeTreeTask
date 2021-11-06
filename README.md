@@ -35,14 +35,13 @@ ii)if the image is present, yet the function isn't supported by the application,
 We use the render_template to align the work of python with the HTML pages easily. we first create a simple HTML template for each page and implement the python output through render_template.
 
 ## Bonus Section:
-Many requests are redundant, therefore we must think of a way to spare ourselves from calculating problems which we already faced and calculated.\
-(redundant problems are problems that include the same image and the same function as a previously calculated request)\
+Many requests are redundant, therefore we must think of a way to spare ourselves from calculating problems which we already faced and calculated. (redundant problems are problems that include the same image and the same function as a previously calculated request)\
 The solution is to create a database for each image that includes all the functions: When an image is presented with a function that it hadn't calculated before, we calculate the desired function and add it to the image's database, whereas when we are faced with a previously calculated function we automatically return the previous calculation. 
 
 # Getting Started:
 To work with the application, you must first make sure to install all these prerequisites (if you haven't already):\
 1)Flask, in order to install: ```apt install python3-flask``` \
-2)Docker Desktop - to install, follow the instructions here : https://docs.docker.com/desktop/windows/install/ 
+2)Docker Desktop - to install, follow the instructions here : https://docs.docker.com/desktop/windows/install/ \
 3)Python, to install, follow instructions: https://www.python.org/downloads/ \
 4) and lastly, you need to have GIT installed on your terminal. I strongly suggest working with "Git Bash", to download: https://git-scm.com/downloads \
 

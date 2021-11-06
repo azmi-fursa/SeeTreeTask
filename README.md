@@ -2,7 +2,9 @@
 
 ## Motivation and Goals:
 AI is an expanding field in the industry, in this application we will learn how to extract interesting features about images and how to calculate Image Statistics.
-the goal of this application is to implement functions that help us extract statistics about various images, these functions include: min, max, mean, median and percentile.
+Images are made out of multiple pixels, each pixel has a grayscale level in the range "0 - 255", where 0 is black and 255 is white. 
+The goal of this application is to implement functions that help us extract statistics about multiple images, and their pixels; these functions include: 
+min, max, mean, median and percentile. 
 
 The images are stored in a Cloud Storage Bucket, and in order to access these images we will have to send a GET request to the following api:  https://storage.googleapis.com/seetree-demo-open/.
 

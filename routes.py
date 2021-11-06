@@ -31,7 +31,7 @@ def functions(IMAGE_FILE_NAME):
     var = try_open_image(image)
     if(var=="error"):
         return render_template('ErrorPaths.html', msg='Bad image file name!')
-    return render_template('PixelFunctionality.html', IMAGE_FILE_NAME=IMAGE_FILE_NAME)
+    return render_template('PixelFunctionalities.html', IMAGE_FILE_NAME=IMAGE_FILE_NAME)
 
 @app.route('/stats/<IMAGE_FILE_NAME>/<function_NAME>', methods=['GET'])
 def calc_stats(IMAGE_FILE_NAME,function_NAME):
